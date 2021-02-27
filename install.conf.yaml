@@ -5,7 +5,11 @@
     create:
       mode: 0755
 
-- clean: ['~']
+- clean:
+    ~/:
+    ~/.ssh:
+    ~/.config:
+      recursive: true
 
 - create:
     ~/Projects:
