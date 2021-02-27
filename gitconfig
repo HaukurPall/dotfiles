@@ -1,0 +1,7 @@
+[user]
+	email = haukurpalljonsson@gmail.com
+	name = Haukur
+[core]
+	editor = vim
+[pull]
+	rebase = false

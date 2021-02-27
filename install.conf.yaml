@@ -1,0 +1,33 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- create:
+  ~/Projects:
+    mode: 0755
+  ~/Resources:
+    mode: 0755
+  ~/.ssh:
+    mode: 0700
+  ~/.config:
+    mode: 0755
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+
+# We assume the necessary directories have been created.
+- link:
+    ~/.gitconfig: 
+      path: gitconfig
+    ~/.config/fish/config.fish:
+      path: config.fish
+      force: true # Overwrite the current file
+    ~/.config/powerline-shell/config.json:
+      path: powerline_config_json
+    ~/.config/pypoetry/config.toml:
+      path: poetry_config.toml
+    ~/.config/nvim/init.vim:
+      path: init.vim
+    ~/.ssh/config:
+      path: ssh_config

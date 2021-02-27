@@ -1,0 +1,32 @@
+# Read more about SSH config files: https://linux.die.net/man/5/ssh_config
+AddKeysToAgent yes
+Host torpaq
+    HostName torpaq.hir.is
+    User haukurpj
+    IdentityFile ~/.ssh/id_ed25519
+    ForwardAgent yes
+
+Host terra
+    HostName terra
+    User haukurpj
+    IdentityFile ~/.ssh/id_ed25519
+    ForwardAgent yes
+
+Host pallas
+    hostname 144.76.220.164
+    user haukurpj
+    IdentityFile ~/.ssh/id_ed25519
+    ForwardAgent yes
+
+Host birta
+    hostname 94.130.19.115
+    user haukurpj
+    IdentityFile ~/.ssh/id_ed25519
+    ForwardAgent yes
+
+Host maja
+    hostname 94.130.38.213
+    user haukurpj
+    IdentityFile ~/.ssh/id_ed25519
+    ForwardAgent yes
+
