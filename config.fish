@@ -3,12 +3,14 @@ set -Ux fish_greeting
 
 set -gx EDITOR vim
 
+# Use local installation before system.
+set -x PATH $HOME/.local/bin $PATH
 
+# Configure local installations usage in fish
 # fzf
 fzf_key_bindings
 set -gx FZF_DEFAULT_COMMAND "fd --type f"
 set -gx FZF_DEFAULT_OPTS "--height 40% --layout=reverse --border"
-
 
 # Powerline shell
 if type -q powerline-shell

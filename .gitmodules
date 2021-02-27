@@ -2,3 +2,6 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
+[submodule "fish-shell"]
+	path = fish-shell
+	url = https://github.com/fish-shell/fish-shell/
