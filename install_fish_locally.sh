@@ -1,7 +1,7 @@
 #!/bin/bash
 # Script for installing Fish Shell on systems without root access.
 # Fish Shell will be installed in $HOME/.local/bin.
-# It's assumed that cmake and make is installed.
+# It's assumed that cmake, ncurses and make is installed.
 # It's assumed that fish-shell has been cloned to the current directory 
 # exit on error
 set -e
