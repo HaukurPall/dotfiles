@@ -20,7 +20,7 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-
+  - [bash install_fish_locally.sh, Installing Fish]
 # We assume the necessary directories have been created.
 - link:
     ~/.gitconfig: 

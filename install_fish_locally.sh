@@ -5,7 +5,13 @@
 # It's assumed that fish-shell has been cloned to the current directory 
 # exit on error
 set -e
- 
+
+if command -v fish &> /dev/null
+then
+    echo "Fish already installed"
+    exit 0
+fi
+
 cd fish-shell
  
 # extract files, configure, and compile
