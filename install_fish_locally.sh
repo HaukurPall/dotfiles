@@ -14,4 +14,4 @@ cmake .. -DCMAKE_INSTALL_PREFIX=$HOME/.local
 make
 make install
 # Change the default shell to fish
-chsh -s $HOME/.local/fish/bin/fish
+chsh -s $HOME/.local/bin/fish
