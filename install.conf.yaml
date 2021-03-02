@@ -24,11 +24,15 @@
       path: gitconfig
     ~/.config/fish/config.fish:
       path: config.fish
+      create: true
     ~/.config/powerline-shell/config.json:
       path: powerline_config.json
+      create: true
     ~/.config/pypoetry/config.toml:
       path: poetry_config.toml
+      create: true
     ~/.config/nvim/init.vim:
       path: init.vim
+      create: true
     ~/.ssh/config:
       path: ssh_config
