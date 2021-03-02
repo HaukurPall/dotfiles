@@ -10,7 +10,7 @@ BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 cd "${BASEDIR}"
 git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
-git submodule update --init --recursive "${DOTBOT_DIR}"
+git submodule update --init --recursive
 if command -v apt &> /dev/null; then
     sudo "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" --plugin dotbot_plugin_aptget/aptget.py -d "${BASEDIR}" --config-file packages.yaml
     # Set the shell 
