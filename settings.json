@@ -1,0 +1,61 @@
+{
+    "shellcheck.run": "onSave",
+    "shellcheck.enableQuickFix": true,
+    "git.autofetch": true,
+    "python.formatting.provider": "black",
+    "python.pythonPath": "python",
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "files.watcherExclude": {
+        "**/.venv/**": true,
+        "**/data/**": true
+    },
+    "python.testing.autoTestDiscoverOnSaveEnabled": false,
+    "python.testing.cwd": "./",
+    "python.testing.pytestEnabled": true,
+    "python.showStartPage": false,
+    "csv-preview.lineNumbers": "ordinal",
+    "csv-preview.separator": "\\t",
+    "explorer.confirmDragAndDrop": false,
+    "editor.fontFamily": "'mononoki Nerd Font Mono'",
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.renderWhitespace": "boundary",
+    "editor.snippetSuggestions": "bottom",
+    "vim.surround": false,
+    "vim.vimrc.enable": true,
+    "vim.leader": " ",
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [
+                "leader",
+                "m"
+            ],
+            "commands": [
+                "python.refactorExtractMethod"
+            ]
+        },
+    ],
+    "editor.autoSurround": "never",
+    "jupyter.sendSelectionToInteractiveWindow": false,
+    "jupyter.askForKernelRestart": false,
+    "python.languageServer": "Pylance",
+    "files.exclude": {
+        "**/.venv": true
+    },
+    "python.analysis.typeCheckingMode": "basic",
+    "window.zoomLevel": 1,
+    "editor.formatOnSave": true,
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "python.linting.flake8Enabled": true,
+    "python.linting.mypyEnabled": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
+    "python.linting.flake8Args": [
+        "--config=.flake8"
+    ],
+}
