@@ -4,7 +4,7 @@ Manually install
 - fzf
 - exa
 - powerline-shell
-- nvim
+- neovim
 - pypoetry
 ```
 git clone https://github.com/HaukurPall/dotfiles.git && cd dotfiles && ./install
