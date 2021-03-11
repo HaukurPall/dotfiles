@@ -33,6 +33,8 @@
       create: true
     ~/.config/nvim/init.vim:
       path: init.vim
+    ~/.vimrc:
+      path: init.vim
       create: true
     ~/.ssh/config:
       path: ssh_config
