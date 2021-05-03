@@ -1,7 +1,10 @@
 [user]
 	email = haukurpalljonsson@gmail.com
-	name = Haukur
+    name = Haukur Páll
 [core]
-	editor = vim
+	editor = nvim
+  excludesfile = ~/.gitignore
 [pull]
   ff = only
+[init]
+	defaultBranch = master
