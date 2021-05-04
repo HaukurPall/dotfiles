@@ -33,6 +33,7 @@
       create: true
     ~/.config/nvim/init.vim:
       path: init.vim
+      create: true
     ~/.vimrc:
       path: init.vim
       create: true
