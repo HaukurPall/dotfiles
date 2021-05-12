@@ -4,6 +4,23 @@ set -Ux fish_greeting
 # Use local installation before system.
 set -x PATH $HOME/.local/bin $PATH
 
+# Useful flags
+set -x VIRTUAL_ENV_DISABLE_PROMPT 1
+
+# Useful aliases/functions
+# Source bash files and export to fish
+function bass
+  exec bash -c "source $argv; exec fish"
+end
+# Update dotfiles
+function dotup
+  cd ~/dotfiles
+  git pull
+  ./install
+  cd -
+end
+
+
 # If 'exa' is installed, use it instead of 'ls'
 if type -q exa
     # exa > ls
