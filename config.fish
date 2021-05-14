@@ -19,7 +19,14 @@ function dotup
   ./install
   cd -
 end
+# Make less nice
+alias less='less -S -N'
 
+# Keybindings
+bind \ch prevd # C^h to move to previous directory
+bind \cl nextd # C^l to move to forward directory
+bind \eh backward-word
+bind \el forward-word
 
 # If 'exa' is installed, use it instead of 'ls'
 if type -q exa
