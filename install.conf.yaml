@@ -22,6 +22,8 @@
 - link:
     ~/.gitconfig: 
       path: gitconfig
+    ~/.gitignore: 
+      path: gitignore
     ~/.config/fish/config.fish:
       path: config.fish
       create: true
