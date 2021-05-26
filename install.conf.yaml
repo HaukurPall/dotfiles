@@ -30,6 +30,9 @@
     ~/.config/powerline-shell/config.json:
       path: powerline_config.json
       create: true
+    ~/.config/htop/htoprc:
+      path: htoprc
+      create: true
     ~/.config/pypoetry/config.toml:
       path: poetry_config.toml
       create: true
