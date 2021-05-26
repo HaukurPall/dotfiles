@@ -21,6 +21,7 @@ function dotup
 end
 # Make less nice
 alias less='less -S -N'
+alias tsvsplit="sed G | tr '\t' '\n'"
 
 # Keybindings
 bind \ch prevd # C^h to move to previous directory
