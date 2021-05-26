@@ -6,8 +6,13 @@
     "python.pythonPath": "python",
     "python.terminal.activateEnvInCurrentTerminal": true,
     "files.watcherExclude": {
+        "*.json": true,
+        "*.txt": true,
+        "**/.mypy_cache/**": true,
+        "**/.pytest_cache/**": true,
         "**/.venv/**": true,
-        "**/data/**": true
+        "**/data/**": true,
+        "**/out/**": true
     },
     "python.testing.autoTestDiscoverOnSaveEnabled": false,
     "python.testing.cwd": "./",
@@ -42,7 +47,6 @@
         "**/.venv": true
     },
     "python.analysis.typeCheckingMode": "basic",
-    "window.zoomLevel": 1,
     "editor.formatOnSave": true,
     "workbench.editorAssociations": [
         {
@@ -58,4 +62,31 @@
     "python.linting.flake8Args": [
         "--config=.flake8"
     ],
+    "remote.SSH.useLocalServer": false,
+    "remote.SSH.remotePlatform": {
+        "pallas": "linux",
+        "birta": "linux"
+    },
+    "window.zoomLevel": 1,
+    "terminal.integrated.inheritEnv": true,
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "path": "bash"
+        },
+        "zsh": {
+            "path": "zsh"
+        },
+        "fish": {
+            "path": "fish"
+        },
+        "tmux": {
+            "path": "tmux",
+            "icon": "terminal-tmux"
+        },
+        "pwsh": {
+            "path": "pwsh",
+            "icon": "terminal-powershell"
+        }
+    },
+    "terminal.integrated.defaultProfile.linux": "fish",
 }
