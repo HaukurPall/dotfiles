@@ -12,7 +12,7 @@ set -x PATH $HOME/.local/bin $PATH
 if test $CONDA_HOME
     if ! test -d $CONDA_HOME
         echo "Installing miniconda"
-        bash ./install_miniconda.sh
+        bash $HOME/dotfiles/install_miniconda.sh
     end
     set -x PATH $CONDA_HOME/bin $PATH
     eval conda "shell.fish" "hook" $argv | source
