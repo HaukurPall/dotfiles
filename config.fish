@@ -1,8 +1,24 @@
 # Disable welcome message
 set -Ux fish_greeting
 
+if test $hostname = "manjaro"
+    set -x CONDA_HOME $HOME/.local/miniconda3
+else if test $hostname = "birta"; or $hostname = "pallas"
+    set -x CONDA_HOME /data2/scratch/haukurpj/miniconda3
+end
 # Use local installation before system.
 set -x PATH $HOME/.local/bin $PATH
+# Setup/install Conda
+if test $CONDA_HOME
+    if ! test -d $CONDA_HOME
+        echo "Installing miniconda"
+        bash ./install_miniconda.sh
+    end
+    set -x PATH $CONDA_HOME/bin $PATH
+    eval conda "shell.fish" "hook" $argv | source
+else
+    echo "CONDA_HOME is not define for this machine. Fix it!"
+end
 
 # Useful flags
 set -x VIRTUAL_ENV_DISABLE_PROMPT 1
@@ -60,9 +76,4 @@ if type -q powerline-shell
     function fish_prompt
         powerline-shell --shell bare $status
     end
-end
-
-# If pyenv is installed, initialize it.
-if type -q pyenv
-    pyenv init - | source
 end
