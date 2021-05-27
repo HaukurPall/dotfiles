@@ -3,7 +3,9 @@ set -Ux fish_greeting
 
 if test $hostname = "manjaro"
     set -x CONDA_HOME $HOME/.local/miniconda3
-else if test $hostname = "birta"; or $hostname = "pallas"
+else if test $hostname = "birta"
+    set -x CONDA_HOME /data2/scratch/haukurpj/miniconda3
+else if test $hostname = "pallas"
     set -x CONDA_HOME /data2/scratch/haukurpj/miniconda3
 end
 # Use local installation before system.
