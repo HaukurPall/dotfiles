@@ -24,8 +24,8 @@
       path: gitconfig
     ~/.gitignore: 
       path: gitignore
-    ~/.config/fish/config.fish:
-      path: config.fish
+    ~/.config/fish:
+      path: fish
       create: true
     ~/.config/powerline-shell/config.json:
       path: powerline_config.json
@@ -47,3 +47,8 @@
       create: true
     ~/.ssh/config:
       path: ssh_config
+
+- shell:
+  - command: ./scripts/install_miniconda.fish
+    description: Installing miniconda
+    stdout: true
