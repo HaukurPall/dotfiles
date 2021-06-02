@@ -10,8 +10,6 @@ if test $CONDA_HOME
         echo "Installing miniconda"
         install_miniconda
     end
-    set -gx PATH $CONDA_HOME/bin $PATH
-    eval conda "shell.fish" "hook" $argv | source
 else
     echo "CONDA_HOME is not define for this machine. Fix it!"
 end

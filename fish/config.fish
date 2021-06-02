@@ -12,7 +12,10 @@ else if test $hostname = "pallas"
 end
 # Use local installation before system.
 set -x PATH $HOME/.local/bin $PATH
-
+if test $CONDA_HOME
+    if test -d $CONDA_HOME
+        set -gx PATH $CONDA_HOME/bin $PATH
+        eval conda "shell.fish" "hook" $argv | source
 # Useful flags
 set -x VIRTUAL_ENV_DISABLE_PROMPT 1
 
