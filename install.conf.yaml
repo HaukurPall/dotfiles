@@ -18,6 +18,10 @@
       mode: 0700
     ~/.config:
 
+- shell:
+  - command: ./scripts/install_fzf.fish
+    description: Installing fzf
+    stdout: true
 # We assume the necessary directories have been created.
 - link:
     ~/.gitconfig: 
