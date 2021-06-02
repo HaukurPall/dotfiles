@@ -6,9 +6,13 @@ function install_miniconda
 end
 
 if test $CONDA_HOME
-    if ! test -d $CONDA_HOME
+    echo "Testing if conda is installed at $CONDA_HOME"
+    test -d $CONDA_HOME
+    if test $status -eq 1
         echo "Installing miniconda"
         install_miniconda
+    else
+        echo "Miniconda is installed"
     end
 else
     echo "CONDA_HOME is not define for this machine. Fix it!"

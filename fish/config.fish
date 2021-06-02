@@ -5,6 +5,8 @@ if test (hostname) = "manjaro"
     set -gx CONDA_HOME $HOME/.local/miniconda3
 else if test (hostname) = "birta"
     set -gx CONDA_HOME /data2/scratch/haukurpj/miniconda3
+else if test (hostname) = "ada"
+    set -gx CONDA_HOME /data/scratch/haukurpj/miniconda3
 else if test (hostname) = "maja"
     set -gx CONDA_HOME /data2/scratch/haukurpj/miniconda3
 else if test (hostname) = "pallas"
