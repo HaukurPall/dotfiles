@@ -16,6 +16,8 @@ if test $CONDA_HOME
     if test -d $CONDA_HOME
         set -gx PATH $CONDA_HOME/bin $PATH
         eval conda "shell.fish" "hook" $argv | source
+    end
+end
 # Useful flags
 set -x VIRTUAL_ENV_DISABLE_PROMPT 1
 
