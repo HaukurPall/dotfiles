@@ -1,13 +1,13 @@
 # Disable welcome message
 set -Ux fish_greeting
 
-if test $hostname = "manjaro"
+if test (hostname) = "manjaro"
     set -gx CONDA_HOME $HOME/.local/miniconda3
-else if test $hostname = "birta"
+else if test (hostname) = "birta"
     set -gx CONDA_HOME /data2/scratch/haukurpj/miniconda3
-else if test $hostname = "maja"
+else if test (hostname) = "maja"
     set -gx CONDA_HOME /data2/scratch/haukurpj/miniconda3
-else if test $hostname = "pallas"
+else if test (hostname) = "pallas"
     set -gx CONDA_HOME /data2/scratch/haukurpj/miniconda3
 end
 # Use local installation before system.
