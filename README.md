@@ -5,7 +5,6 @@ Install via package manager
 - fd
 
 ```
-pip install --user poetry
 pip install --user powerline-shell
 ```
 
@@ -15,14 +14,9 @@ chmod u+x nvim.appimage
 mv nvim.appimage ~/.local/bin/nvim
 ```
 
-```
-git clone --depth 1 https://github.com/junegunn/fzf.git
-fzf/install --no-update-rc
-```
-
 ## Install
 ```
-git clone https://github.com/HaukurPall/dotfiles.git && cd dotfiles && ./install
+git clone git@github.com:HaukurPall/dotfiles.git && cd dotfiles && ./install
 ```
 
 ## Desktop ENV
