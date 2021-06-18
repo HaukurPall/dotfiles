@@ -12,6 +12,12 @@ Host terra
     IdentityFile ~/.ssh/id_ed25519
     ForwardAgent yes
 
+Host greynir
+    HostName greynir.is
+    User haukurpj
+    IdentityFile ~/.ssh/id_ed25519
+    ForwardAgent yes
+
 Host pallas
     hostname 144.76.220.164
     user haukurpj

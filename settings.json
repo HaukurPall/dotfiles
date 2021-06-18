@@ -48,12 +48,9 @@
     },
     "python.analysis.typeCheckingMode": "basic",
     "editor.formatOnSave": true,
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
     "python.linting.flake8Enabled": true,
     "python.linting.mypyEnabled": true,
     "editor.codeActionsOnSave": {
@@ -65,7 +62,9 @@
     "remote.SSH.useLocalServer": false,
     "remote.SSH.remotePlatform": {
         "pallas": "linux",
-        "birta": "linux"
+        "birta": "linux",
+        "maja": "linux",
+        "ada": "linux"
     },
     "window.zoomLevel": 1,
     "terminal.integrated.inheritEnv": true,
@@ -89,4 +88,11 @@
         }
     },
     "terminal.integrated.defaultProfile.linux": "fish",
+    "terminal.integrated.tabs.enabled": false,
+    "editor.cursorStyle": "line",
+    "editor.lineNumbers": "on",
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+    "editor.wordWrap": "off",
+    "editor.detectIndentation": false,
+    "bashIde.highlightParsingErrors": true,
 }
