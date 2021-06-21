@@ -23,10 +23,3 @@ if type -q fzf
     set -gx FZF_DEFAULT_COMMAND "fd --type f"
     set -gx FZF_DEFAULT_OPTS "--height 40% --layout=reverse --border"
 end
-
-# If powerline shell is installed, use it for the fish promt
-if type -q powerline-shell
-    function fish_prompt
-        powerline-shell --shell bare $status
-    end
-end
