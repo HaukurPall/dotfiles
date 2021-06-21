@@ -31,9 +31,6 @@
     ~/.config/fish:
       path: fish
       create: true
-    ~/.config/powerline-shell/config.json:
-      path: powerline_config.json
-      create: true
     ~/.config/Code/User/settings.json:
       path: settings.json
       create: true
