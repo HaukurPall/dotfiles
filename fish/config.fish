@@ -1,5 +1,7 @@
 # Disable welcome message
 set -Ux fish_greeting
+# Lengthen the cwd of promt
+set -g fish_prompt_pwd_dir_length 0
 
 if test (hostname) = "manjaro"
     set -gx CONDA_HOME $HOME/.local/miniconda3
