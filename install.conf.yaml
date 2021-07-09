@@ -40,6 +40,9 @@
     ~/.config/pypoetry/config.toml:
       path: poetry_config.toml
       create: true
+    ~/.config/shellcheckrc:
+      path: shellcheckrc
+      create: true
     ~/.config/nvim/init.vim:
       path: init.vim
       create: true
