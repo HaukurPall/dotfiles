@@ -47,11 +47,9 @@
         "**/.venv": true
     },
     "python.analysis.typeCheckingMode": "basic",
-    "editor.formatOnSave": true,
     "workbench.editorAssociations": {
-        "*.ipynb": "jupyter.notebook.ipynb"
+        "*.ipynb": "jupyter-notebook"
     },
-    "python.linting.flake8Enabled": true,
     "python.linting.mypyEnabled": true,
     "editor.codeActionsOnSave": {
         "source.organizeImports": true
@@ -66,7 +64,6 @@
         "maja": "linux",
         "ada": "linux"
     },
-    "window.zoomLevel": 1,
     "terminal.integrated.inheritEnv": true,
     "terminal.integrated.profiles.linux": {
         "bash": {
@@ -95,4 +92,31 @@
     "editor.wordWrap": "off",
     "editor.detectIndentation": false,
     "bashIde.highlightParsingErrors": true,
+    "[dockerfile]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "python.defaultInterpreterPath": "python",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "[django-html]": {
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": true,
+            "strings": true
+        }
+    },
+    "editor.formatOnSaveMode": "modifications",
+    "[nginx]": {
+        "editor.defaultFormatter": "ahmadalli.vscode-nginx-conf"
+    },
+    "files.associations": {
+        "*.conf": "nginx"
+    },
+    "editor.inlineSuggest.enabled": true,
+    "files.insertFinalNewline": true,
 }
