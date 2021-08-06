@@ -14,15 +14,19 @@ else if test (hostname) = "maja"
 else if test (hostname) = "pallas"
     set -gx CONDA_HOME /data2/scratch/haukurpj/miniconda3
 end
+
 # Use local installation before system.
 set -x PATH $HOME/.local/bin $PATH
+
+# Initialize conda
 if test $CONDA_HOME
     if test -d $CONDA_HOME
         set -gx PATH $CONDA_HOME/bin $PATH
         eval conda "shell.fish" "hook" $argv | source
     end
 end
-# Useful flags
+
+# Disable virtualenv promt
 set -x VIRTUAL_ENV_DISABLE_PROMPT 1
 
 # Useful aliases/functions
@@ -30,4 +34,5 @@ set -x VIRTUAL_ENV_DISABLE_PROMPT 1
 alias less='less -S -N'
 alias tsvsplit="sed G | tr '\t' '\n'"
 
+# Aliases for installed programs
 source ~/.config/fish/link_programs.fish

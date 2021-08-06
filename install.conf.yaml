@@ -24,6 +24,8 @@
     stdout: true
 # We assume the necessary directories have been created.
 - link:
+    ~/.local/bin/fzf: 
+      path: fzf/bin/fzf
     ~/.gitconfig: 
       path: git/gitconfig
     ~/.gitignore: 
