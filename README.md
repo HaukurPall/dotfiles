@@ -5,10 +5,6 @@ Install via package manager
 - fd
 
 ```
-pip install --user powerline-shell
-```
-
-```
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
 mv nvim.appimage ~/.local/bin/nvim

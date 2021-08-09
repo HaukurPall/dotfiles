@@ -13,6 +13,8 @@ else if test (hostname) = "maja"
     set -gx CONDA_HOME /data2/scratch/haukurpj/miniconda3
 else if test (hostname) = "pallas"
     set -gx CONDA_HOME /data2/scratch/haukurpj/miniconda3
+else if test (hostname) = "raspberrypi"
+    set -gx CONDA_HOME /$HOME/disk/tools/miniconda3
 end
 
 # Use local installation before system.
