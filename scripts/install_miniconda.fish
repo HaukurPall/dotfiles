@@ -5,22 +5,11 @@ function install_miniconda
     rm ~/miniconda.sh
 end
 
-function get_architecture
-    set ARCHITECTURE (uname -m)
-    if test string match -q "x86_64" $ARCHITECTURE
-        echo "x86_64 detected"
-    else if test string match -q "armv7*" $ARCHITECTURE
-        echo "armv7 detected"
-        set ARCHITECTURE "armv7"
-    end
-    return $ARCHITECTURE
-end
-
 if test $CONDA_HOME
     echo "Testing if conda is installed at $CONDA_HOME"
     test -d $CONDA_HOME
     if test $status -eq 1
-        if test string match -q "x86_64" get_architecture
+        if test string match -q "x86_64" (get_architecture)
             echo "Installing miniconda"
             install_miniconda
         else

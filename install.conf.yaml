@@ -55,3 +55,7 @@
   - command: ./scripts/install_miniconda.fish
     description: Installing miniconda
     stdout: true
+- shell:
+  - command: ./scripts/install_exa.fish
+    description: Installing exa
+    stdout: true
