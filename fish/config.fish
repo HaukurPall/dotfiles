@@ -17,7 +17,11 @@ else if test (hostname) = "raspberrypi"
     set -gx CONDA_HOME /$HOME/disk/tools/miniconda3
 end
 
+# Define the tool location
+set -gx TOOLS_DIR $HOME/Tools
+
 # Use local installation before system.
+set -x PATH $TOOLS_DIR/bin $PATH
 set -x PATH $HOME/.local/bin $PATH
 
 # Initialize conda
