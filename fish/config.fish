@@ -5,10 +5,13 @@ set -g fish_prompt_pwd_dir_length 0
 
 if test (hostname) = "manjaro"
     set -gx CONDA_HOME $HOME/.local/miniconda3
+    set -x PATH $HOME/.cargo/bin $PATH
 else if test (hostname) = "birta"
     set -gx CONDA_HOME /data2/scratch/haukurpj/miniconda3
 else if test (hostname) = "ada"
     set -gx CONDA_HOME /data/scratch/haukurpj/miniconda3
+    set -gx HF_HOME /data/scratch/haukurpj/huggingface_cache
+    set -gx TRANSFORMERS_CACHE /data/scratch/haukurpj/transformers_cache
 else if test (hostname) = "maja"
     set -gx CONDA_HOME /data2/scratch/haukurpj/miniconda3
 else if test (hostname) = "pallas"
@@ -22,7 +25,7 @@ set -gx TOOLS_DIR $HOME/Tools
 
 # Use local installation before system.
 set -x PATH $TOOLS_DIR/bin $PATH
-set -x PATH $HOME/.local/bin $PATH
+set -x PATH $PATH $HOME/.local/bin
 
 # Initialize conda
 if test $CONDA_HOME
