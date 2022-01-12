@@ -2,61 +2,64 @@
     "shellcheck.run": "onSave",
     "shellcheck.enableQuickFix": true,
     "git.autofetch": true,
-    "python.formatting.provider": "black",
-    "python.pythonPath": "python",
-    "python.terminal.activateEnvInCurrentTerminal": true,
-    "files.watcherExclude": {
-        "*.json": true,
-        "*.txt": true,
-        "**/.mypy_cache/**": true,
-        "**/.pytest_cache/**": true,
-        "**/.venv/**": true,
-        "**/data/**": true,
-        "**/out/**": true
-    },
-    "python.testing.autoTestDiscoverOnSaveEnabled": false,
-    "python.testing.cwd": "./",
-    "python.testing.pytestEnabled": true,
-    "python.showStartPage": false,
     "csv-preview.lineNumbers": "ordinal",
     "csv-preview.separator": "\\t",
-    "explorer.confirmDragAndDrop": false,
-    "editor.fontFamily": "'mononoki Nerd Font Mono'",
-    "workbench.startupEditor": "newUntitledFile",
-    "editor.renderWhitespace": "boundary",
-    "editor.snippetSuggestions": "bottom",
+    // vim settings
     "vim.surround": false,
     "vim.vimrc.enable": true,
-    "vim.leader": " ",
+    "vim.leader": "<space>",
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "<leader>",
+                "f"
+            ],
+            "commands": [
+                "editor.action.formatDocument"
+            ]
+        }
+    ],
     "vim.visualModeKeyBindings": [
         {
             "before": [
-                "leader",
+                "<leader>",
                 "m"
             ],
             "commands": [
                 "python.refactorExtractMethod"
             ]
-        },
+        }
     ],
-    "editor.autoSurround": "never",
+    "vim.useCtrlKeys": true,
+    "vim.commandLineModeKeyBindingsNonRecursive": [],
+    // Python settings
     "jupyter.sendSelectionToInteractiveWindow": false,
     "jupyter.askForKernelRestart": false,
+    "python.formatting.provider": "black",
+    "python.pythonPath": "python",
+    "python.testing.cwd": "",
+    "python.testing.pytestEnabled": true,
     "python.languageServer": "Pylance",
-    "files.exclude": {
-        "**/.venv": true
+    "python.defaultInterpreterPath": "python",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
     },
     "python.analysis.typeCheckingMode": "basic",
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
     "python.linting.mypyEnabled": true,
-    "editor.codeActionsOnSave": {
-        "source.organizeImports": true
-    },
-    "python.linting.flake8Args": [
-        "--config=.flake8"
+    "python.poetryPath": "",
+    "python.testing.pytestPath": "",
+    "python.testing.unittestArgs": [],
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintArgs": [
+        "--disable=line-too-long",
+        "--generated-members=torch.*"
     ],
+    // remote ssh settings
     "remote.SSH.useLocalServer": false,
     "remote.SSH.remotePlatform": {
         "pallas": "linux",
@@ -86,22 +89,44 @@
     },
     "terminal.integrated.defaultProfile.linux": "fish",
     "terminal.integrated.tabs.enabled": true,
+    // Editor settings
+    "editor.autoSurround": "never",
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": [
+        "source.formatDocument",
+        "source.organizeImports",
+        "source.fixAll"
+    ],
+    "editor.renderWhitespace": "boundary",
+    "editor.fontFamily": "'mononoki Nerd Font Mono'",
+    "editor.snippetSuggestions": "bottom",
+    "editor.inlineSuggest.enabled": true,
     "editor.cursorStyle": "line",
     "editor.lineNumbers": "on",
     "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
     "editor.wordWrap": "off",
     "editor.detectIndentation": false,
     "bashIde.highlightParsingErrors": true,
+    // Specific language settings
     "[dockerfile]": {
         "editor.defaultFormatter": "ms-azuretools.vscode-docker"
     },
-    "[javascript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features",
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace"
     },
-    "python.defaultInterpreterPath": "python",
-    "notebook.cellToolbarLocation": {
-        "default": "right",
-        "jupyter-notebook": "left"
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[django-html]": {
         "editor.quickSuggestions": {
@@ -110,13 +135,63 @@
             "strings": true
         }
     },
-    "editor.formatOnSaveMode": "modifications",
     "[nginx]": {
         "editor.defaultFormatter": "ahmadalli.vscode-nginx-conf"
     },
     "files.associations": {
         "*.conf": "nginx"
     },
-    "editor.inlineSuggest.enabled": true,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "explorer.confirmDragAndDrop": false,
+    "workbench.startupEditor": "newUntitledFile",
+    // VS code update settings
+    "extensions.autoUpdate": false,
+    "update.mode": "manual",
+    // File explorer settings
     "files.insertFinalNewline": true,
+    "files.watcherExclude": {
+        "*.json": true,
+        "*.txt": true,
+        "**/.mypy_cache/**": true,
+        "**/.pytest_cache/**": true,
+        "**/.venv/**": true,
+        "**/data/**": true,
+        "**/out/**": true
+    },
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust"
+    },
+    "[shellscript]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+    "[dockercompose]": {
+        "editor.defaultFormatter": "stylelint.vscode-stylelint"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[toml]": {
+        "editor.defaultFormatter": "tamasfe.even-better-toml"
+    },
+    "[ignore]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+    "[graphql]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "python.linting.flake8Args": [
+        "--max-line-length",
+        "120"
+    ],
+    "[yaml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": true,
+        "plaintext": false,
+        "markdown": false
+    },
 }
