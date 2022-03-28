@@ -20,6 +20,10 @@ else if test (hostname) = "raspberrypi"
     set -gx CONDA_HOME /$HOME/disk/tools/miniconda3
 end
 
+for secret_file in $HOME/Secrets/*.fish
+    source $secret_file
+end
+
 # Define the tool location
 set -gx TOOLS_DIR $HOME/Tools
 
