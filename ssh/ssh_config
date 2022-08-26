@@ -6,9 +6,9 @@ Host torpaq
     IdentityFile ~/.ssh/id_ed25519
     ForwardAgent yes
 
-Host pi
+Host rassi
     HostName 192.168.1.200
-    User pi
+    User haukurpj
     IdentityFile ~/.ssh/id_ed25519
     ForwardAgent yes
 
@@ -47,3 +47,4 @@ Host ada
     IdentityFile ~/.ssh/id_ed25519
     ForwardAgent yes
     ProxyCommand ssh -q -W %h:%p birta
+
