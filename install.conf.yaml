@@ -13,12 +13,6 @@
 
 - create:
     ~/Projects:
-    ~/Resources:
-    ~/Videos/Movies:
-    ~/Videos/TV:
-    ~/Datasets:
-    ~/Models:
-    ~/Pictures:
     ~/Secrets:
     ~/Tools/bin:
     ~/.ssh:
