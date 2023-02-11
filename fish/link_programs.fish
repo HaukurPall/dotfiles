@@ -17,12 +17,3 @@ if type -q nvim
     set -gx EDITOR nvim
 end
 
-# If 'fzf' is installed, use it for history search in fish
-if type -q fzf
-    fzf_key_bindings
-    # If 'fd' is installed, use it for fuzzy search in fish
-    if type -q fd
-        set -gx FZF_DEFAULT_COMMAND "fd --type f"
-    end
-    set -gx FZF_DEFAULT_OPTS "--height 40% --layout=reverse --border"
-end
