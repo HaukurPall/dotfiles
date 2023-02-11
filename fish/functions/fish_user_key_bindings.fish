@@ -1,4 +1,3 @@
 # Keybindings
-bind \eh backward-word
-bind \el forward-word
-bind \cy accept-autosuggestion
+bind \el forward-word  # alt + l (accept one word in suggestion)
+bind \cy accept-autosuggestion  # ctrl + y (accept autosuggestion)
