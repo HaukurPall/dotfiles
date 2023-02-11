@@ -42,9 +42,8 @@ Host maja
     IdentityFile ~/.ssh/id_ed25519
     ForwardAgent yes
 Host ada
-    hostname 82.221.147.48
+    hostname ada.mideind.is
     user haukurpj
     IdentityFile ~/.ssh/id_ed25519
     ForwardAgent yes
-    ProxyCommand ssh -q -W %h:%p birta
 
