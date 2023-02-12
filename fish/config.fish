@@ -22,10 +22,11 @@ alias sq="squeue -O \"JobID:.6,Partition:.9,UserName:.9,State:.8 ,Name:35,NumCPU
 
 # Abbreviations
 # git
-abbr gaa 'git add --all'
+abbr gadd 'git add --all'
 abbr gcm 'git commit -m'
 abbr gs 'git status'
-abbr gp 'git pull'
+abbr gpl 'git pull'
+abbr gps 'git push'
 
 # If 'bat' is installed
 if type -q bat
