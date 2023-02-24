@@ -67,7 +67,7 @@
         "ada": "linux",
         "rassi": "linux"
     },
-    "terminal.integrated.inheritEnv": true,
+    "terminal.integrated.inheritEnv": false,
     "terminal.integrated.profiles.linux": {
         "bash": {
             "path": "bash"
@@ -310,4 +310,6 @@
         "black"
     ],
     "redhat.telemetry.enabled": false,
+    "terminal.integrated.sendKeybindingsToShell": true,
+    "terminal.integrated.shellIntegration.decorationsEnabled": "never",
 }
