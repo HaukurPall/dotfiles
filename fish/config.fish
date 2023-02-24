@@ -59,8 +59,8 @@ end
 if test "$TERM_PROGRAM" = "vscode"
     # set the editor to vscode
     set -gx EDITOR code
-    # and source the vscode integration (still testing it)
-    source (code --locate-shell-integration-path fish)
+    # and source the vscode integration (still testing it) - maybe causing issues with keyring?
+    # source (code --locate-shell-integration-path fish)
 end
 
 # If conda is installed (at CONDA_HOME - universal variable)
