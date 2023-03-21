@@ -16,7 +16,7 @@ fish_add_path $HOME/.local/bin
 
 # Useful aliases/functions
 # Make less nice
-alias less='less -S -N'
+alias less='less -N'
 alias tsvsplit="sed G | tr '\t' '\n'"
 alias sq="squeue -O \"JobID:.6,Partition:.9,UserName:.9,State:.8 ,Name:35,NumCPUs:.8,tres-per-job:.10,tres-per-node:.10,TimeUsed:.12,TimeLeft:.12 ,Command:.20\" -S \"-S\""
 
