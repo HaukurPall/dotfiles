@@ -35,6 +35,11 @@ Host birta
     user haukurpj
     IdentityFile ~/.ssh/id_ed25519
     ForwardAgent yes
+Host luna
+    hostname 95.217.41.179
+    user haukurpj
+    IdentityFile ~/.ssh/id_ed25519
+    ForwardAgent yes
 
 Host maja
     hostname 94.130.38.213

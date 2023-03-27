@@ -312,4 +312,6 @@
     "redhat.telemetry.enabled": false,
     "terminal.integrated.sendKeybindingsToShell": true,
     "terminal.integrated.shellIntegration.decorationsEnabled": "never",
+    "remote.restoreForwardedPorts": false,
+    "python.terminal.activateEnvironment": false,
 }
