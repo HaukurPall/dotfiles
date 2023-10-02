@@ -4,6 +4,8 @@ name = Haukur Páll
 [core]
 editor = nvim
 excludesfile = ~/.gitignore
+[push]
+autoSetupRemote = true
 [pull]
 ff = only
 [init]

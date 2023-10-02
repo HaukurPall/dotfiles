@@ -7,7 +7,7 @@ Host torpaq
     ForwardAgent yes
 
 Host rassi
-    HostName 192.168.1.200
+    HostName 192.168.2.7
     User haukurpj
     IdentityFile ~/.ssh/id_ed25519
     ForwardAgent yes

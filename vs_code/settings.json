@@ -7,36 +7,6 @@
     "git.autofetch": true,
     "csv-preview.lineNumbers": "ordinal",
     "csv-preview.separator": "\\t",
-    // vim settings
-    // "vim.surround": false,
-    // "vim.vimrc.enable": true,
-    // "vim.leader": "<space>",
-    // "vim.normalModeKeyBindings": [
-    //     {
-    //         "before": [
-    //             "<leader>",
-    //             "f"
-    //         ],
-    //         "commands": [
-    //             "editor.action.formatDocument"
-    //         ]
-    //     }
-    // ],
-    // "vim.visualModeKeyBindings": [
-    //     {
-    //         "before": [
-    //             "<leader>",
-    //             "m"
-    //         ],
-    //         "commands": [
-    //             "python.refactorExtractMethod"
-    //         ]
-    //     }
-    // ],
-    // "vim.useCtrlKeys": true,
-    // "vim.commandLineModeKeyBindingsNonRecursive": [],
-    // Python settings
-    "jupyter.sendSelectionToInteractiveWindow": false,
     "jupyter.askForKernelRestart": false,
     "python.formatting.provider": "none",
     "python.testing.cwd": "",
@@ -170,7 +140,7 @@
         "editor.defaultFormatter": "foxundermoon.shell-format"
     },
     "[dockercompose]": {
-        "editor.defaultFormatter": "stylelint.vscode-stylelint"
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
     },
     "[markdown]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -193,9 +163,10 @@
     },
     "github.copilot.enable": {
         "*": true,
-        "yaml": true,
         "plaintext": true,
-        "markdown": true
+        "markdown": true,
+        "scminput": false,
+        "yaml": true
     },
     "[javascript]": {
         "editor.tabSize": 2,
@@ -297,14 +268,6 @@
         "--line-length",
         "120"
     ],
-    "pylint.args": [
-        "--disable=line-too-long,logging-fstring-interpolation,logging-not-lazy,missing-function-docstring",
-        "--generated-members=torch.*,transformers.*"
-    ],
-    "flake8.args": [
-        "--max-line-length",
-        "120"
-    ],
     "isort.args": [
         "--profile",
         "black"
@@ -314,4 +277,23 @@
     "terminal.integrated.shellIntegration.decorationsEnabled": "never",
     "remote.restoreForwardedPorts": false,
     "python.terminal.activateEnvironment": false,
+    "python.defaultInterpreterPath": "/home/haukurpj/.local/miniconda3/envs/greynir_server",
+    "jupyter.interactiveWindow.textEditor.executeSelection": false,
+    "github.copilot.advanced": {},
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "ruff.run": "onSave",
+    "eslint.run": "onSave",
+    "ruff.organizeImports": false,
+    "python.analysis.addImport.exactMatchOnly": true,
+    "python.analysis.autoFormatStrings": true,
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.inlayHints.callArgumentNames": true,
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.userFileIndexingLimit": 10,
+    "diffEditor.maxComputationTime": 0,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "nginx-conf-hint.format.align": true,
 }
