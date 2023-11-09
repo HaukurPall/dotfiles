@@ -32,6 +32,8 @@ abbr gps 'git push'
 if type -q bat
     # use it as a man pager
     set -gx MANPAGER "sh -c 'col -bx | bat -l man -p'"
+    # required to avoid formatting issues
+    set -gx MANROFFOPT -c
     # define bathelp to parse help output
     function bathelp --description 'Parse help output with bat'
         bat --language=help --color=always --style=grid --line-range :500 --wrap=never --pager=never $argv
@@ -56,7 +58,7 @@ if type -q nvim
     set -gx EDITOR nvim
 end
 # If the shell is started via vscode
-if test "$TERM_PROGRAM" = "vscode"
+if test "$TERM_PROGRAM" = vscode
     # set the editor to vscode
     set -gx EDITOR code
     # and source the vscode integration (still testing it) - maybe causing issues with keyring?
@@ -78,8 +80,8 @@ end
 
 # Store the hostname - it's expensive to call
 set -l l_hostname (hostname)
-if test "$l_hostname" = ada 
-     or test "$l_hostname" = mideind-gpu-a100-temp
+if test "$l_hostname" = ada
+    or test "$l_hostname" = mideind-gpu-a100-temp
     # Be sure to set CUDA_VISIBLE_DEVICES on ada
     set -gx CUDA_VISIBLE_DEVICES "$CUDA_VISIBLE_DEVICES"
 end

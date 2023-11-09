@@ -28,12 +28,6 @@
     ~/.config/fish:
       path: fish
       create: true
-    ~/.config/Code/User/settings.json:
-      path: vs_code/settings.json
-      create: true
-    ~/.config/pypoetry/config.toml:
-      path: poetry/poetry_config.toml
-      create: true
     ~/.config/shellcheckrc:
       path: shellcheck/shellcheckrc
       create: true
