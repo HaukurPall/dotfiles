@@ -12,11 +12,7 @@
       recursive: true
 
 - create:
-    ~/Projects:
-    ~/Secrets:
-    ~/Tools/bin:
-    ~/.ssh:
-      mode: 0700
+    ~/projects:
     ~/.config:
 
 # We assume the necessary directories have been created.
@@ -28,11 +24,8 @@
     ~/.config/fish:
       path: fish
       create: true
-    ~/.config/shellcheckrc:
-      path: shellcheck/shellcheckrc
-      create: true
-    ~/.config/nvim/init.vim:
-      path: nvim/init.vim
+    ~/.config/environment.d:
+      path: environment.d
       create: true
     ~/.ssh/config:
       path: ssh/ssh_config
