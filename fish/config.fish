@@ -7,11 +7,8 @@ set -g fish_key_bindings fish_vi_key_bindings
 set -g fish_prompt_pwd_dir_length 0
 # Pager - always use less
 set -gx PAGER less
-# Define the tool location
-set -g TOOLS_DIR $HOME/Tools
 
 # Use local installation before system.
-fish_add_path $TOOLS_DIR/bin
 fish_add_path $HOME/.local/bin
 
 # Useful aliases/functions
@@ -39,30 +36,21 @@ if type -q bat
         bat --language=help --color=always --style=grid --line-range :500 --wrap=never --pager=never $argv
     end
 end
-# If 'exa' is installed, use it instead of 'ls'
-if type -q exa
-    # exa > ls
-    alias ls='exa --classify'
+# If 'eza' is installed, use it instead of 'ls'
+if type -q eza
+    # eza > ls
+    alias ls='eza --classify'
     alias ll='ls --header --long --git'
     alias tree='ls --tree'
 end
-# If 'vim' is installed, use it instead of 'vi'
+# If 'vim' is installed it's the editor
 if type -q vim
-    alias vi=vim
     set -gx EDITOR vim
-end
-# If 'nvim' is installed, use it instead of 'vi' or 'vim'
-if type -q nvim
-    alias vi=nvim
-    alias vim=nvim
-    set -gx EDITOR nvim
 end
 # If the shell is started via vscode
 if test "$TERM_PROGRAM" = vscode
-    # set the editor to vscode
-    set -gx EDITOR code
-    # and source the vscode integration (still testing it) - maybe causing issues with keyring?
-    # source (code --locate-shell-integration-path fish)
+    # set the visual editor to vscode
+    set -gx VISUAL code
 end
 
 # If conda is installed (at CONDA_HOME - universal variable)
