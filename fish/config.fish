@@ -53,6 +53,16 @@ if test "$TERM_PROGRAM" = vscode
     set -gx VISUAL code
 end
 
+# Store the hostname - it's expensive to call
+set -l l_hostname (hostname)
+if test "$l_hostname" = ada
+    or test "$l_hostname" = mideind-gpu-a100-temp
+    # Be sure to set CUDA_VISIBLE_DEVICES on ada
+    set -gx CUDA_VISIBLE_DEVICES "$CUDA_VISIBLE_DEVICES"
+else if test "$l_hostname" = risi
+    set -gx CONDA_HOME /home/haukurpj/projects/miniconda
+end
+
 # If conda is installed (at CONDA_HOME - universal variable)
 if test -n "$CONDA_HOME"
     set -gx CONDA_EXE "$CONDA_HOME/bin/conda"
@@ -66,13 +76,6 @@ if test -n "$CONDA_HOME"
     end
 end
 
-# Store the hostname - it's expensive to call
-set -l l_hostname (hostname)
-if test "$l_hostname" = ada
-    or test "$l_hostname" = mideind-gpu-a100-temp
-    # Be sure to set CUDA_VISIBLE_DEVICES on ada
-    set -gx CUDA_VISIBLE_DEVICES "$CUDA_VISIBLE_DEVICES"
-end
 
 for secret_file in $HOME/Secrets/*.fish
     source $secret_file
