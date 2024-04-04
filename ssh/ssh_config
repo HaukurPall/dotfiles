@@ -2,6 +2,14 @@
 AddKeysToAgent yes
 ForwardAgent yes
 
+Host lobe
+    hostname 164.90.196.53
+    User haukurpj
+
+Host staging-worker
+    hostname 136.243.4.34
+    User haukurpj
+
 Host greynir
     HostName greynir.is
     User haukurpj
