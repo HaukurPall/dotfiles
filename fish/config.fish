@@ -53,6 +53,14 @@ if test "$TERM_PROGRAM" = vscode
     set -gx VISUAL code
 end
 
+# If fzf is installed - we assume the fish plugin PatrickF1/fzf.fish is installed
+if type -q fzf
+    # the default height of the fzf window provided is a little large, we want to reduce it
+    # sadly, we have to overwrite the default options to do this
+    # the default options below are copied from the plugin source _fzf_wrapper.fish
+    set --export FZF_DEFAULT_OPTS '--cycle --layout=reverse --border --height=70% --preview-window=wrap --marker="*"'
+end
+
 # Store the hostname - it's expensive to call
 set -l l_hostname (hostname)
 if test "$l_hostname" = ada
