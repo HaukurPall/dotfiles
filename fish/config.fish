@@ -59,6 +59,9 @@ if type -q fzf
     # sadly, we have to overwrite the default options to do this
     # the default options below are copied from the plugin source _fzf_wrapper.fish
     set --export FZF_DEFAULT_OPTS '--cycle --layout=reverse --border --height=70% --preview-window=wrap --marker="*"'
+    # Add a function to delete history items
+    # This is brittle and may break if the plugin changes
+    set fzf_history_opts --bind="ctrl-d:execute(_fzf_history_item_delete {})+reload(_fzf_history_command)"
 end
 
 # Store the hostname - it's expensive to call
