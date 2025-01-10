@@ -24,8 +24,7 @@
     ~/.config/fish:
       path: fish
       create: true
-    ~/.config/environment.d:
-      path: environment.d
-      create: true
     ~/.ssh/config:
       path: ssh/ssh_config
+    ~/.config/zed:
+      path: zed

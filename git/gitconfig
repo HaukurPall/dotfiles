@@ -17,3 +17,6 @@ process = git-lfs filter-process
 required = true
 [credential]
 helper = store
+[safe]
+	directory = /home/haukurpj/projects/ebuild_local_repo/.git
+	directory = /home/haukurpj/projects/ebuild_local_repo

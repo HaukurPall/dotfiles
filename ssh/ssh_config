@@ -2,34 +2,12 @@
 AddKeysToAgent yes
 ForwardAgent yes
 
-Host lobe
-    hostname 164.90.196.53
+Host manni
+    hostname 192.168.1.118
     User haukurpj
-
-Host staging-worker
-    hostname 136.243.4.34
-    User haukurpj
-
-Host greynir
-    HostName greynir.is
-    User haukurpj
-
-Host pallas
-    hostname 144.76.220.164
-    user haukurpj
-
-Host birta
-    hostname 94.130.19.115
-    user haukurpj
-
-Host luna
-    hostname 95.217.41.179
-    user haukurpj
-
-Host maja
-    hostname 94.130.38.213
-    user haukurpj
 
 Host ada
     hostname ada.mideind.is
     user haukurpj
+Host test-worker
+    hostname test-worker-1.mideind.is

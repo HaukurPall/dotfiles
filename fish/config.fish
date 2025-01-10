@@ -12,9 +12,7 @@ set -gx PAGER less
 fish_add_path $HOME/.local/bin
 
 # Useful aliases/functions
-# Make less nice
 alias less='less -N'
-alias tsvsplit="sed G | tr '\t' '\n'"
 alias sq="squeue -O \"JobID:.6,Partition:.9,UserName:.9,State:.8 ,Name:35,NumCPUs:.8,tres-per-job:.10,tres-per-node:.10,TimeUsed:.12,TimeLeft:.12 ,Command:.20\" -S \"-S\""
 
 # Abbreviations
@@ -70,23 +68,7 @@ if test "$l_hostname" = ada
     or test "$l_hostname" = mideind-gpu-a100-temp
     # Be sure to set CUDA_VISIBLE_DEVICES on ada
     set -gx CUDA_VISIBLE_DEVICES "$CUDA_VISIBLE_DEVICES"
-else if test "$l_hostname" = risi
-    set -gx CONDA_HOME /home/haukurpj/projects/miniconda
 end
-
-# If conda is installed (at CONDA_HOME - universal variable)
-if test -n "$CONDA_HOME"
-    set -gx CONDA_EXE "$CONDA_HOME/bin/conda"
-    set _CONDA_ROOT "$CONDA_HOME"
-    set _CONDA_EXE "$CONDA_HOME/bin/conda"
-    set -gx CONDA_PYTHON_EXE "$CONDA_HOME/bin/python"
-    set -gx PATH $_CONDA_ROOT/condabin $PATH
-
-    if not set -q CONDA_SHLVL
-        set -gx CONDA_SHLVL 0
-    end
-end
-
 
 for secret_file in $HOME/Secrets/*.fish
     source $secret_file
