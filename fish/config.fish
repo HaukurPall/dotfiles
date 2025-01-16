@@ -45,6 +45,11 @@ end
 if type -q vim
     set -gx EDITOR vim
 end
+# If 'zedit' is installed, use it as the editor and visual editor
+if type -q zedit
+    set -gx EDITOR "zedit --wait"  # --wait is required to wait for file edits before returning
+    set -gx VISUAL "zedit --wait"
+end
 # If the shell is started via vscode
 if test "$TERM_PROGRAM" = vscode
     # set the visual editor to vscode
@@ -70,6 +75,6 @@ if test "$l_hostname" = ada
     set -gx CUDA_VISIBLE_DEVICES "$CUDA_VISIBLE_DEVICES"
 end
 
-for secret_file in $HOME/Secrets/*.fish
+for secret_file in $HOME/secrets/*.fish
     source $secret_file
 end
