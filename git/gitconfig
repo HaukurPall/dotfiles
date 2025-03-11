@@ -1,22 +1,35 @@
-[user]
-email = haukurpalljonsson@gmail.com
-name = Haukur Páll
+[alias]
+    # Difftastic aliases, so `git dlog` is `git log` with difftastic and so on.
+    dlog = -c diff.external=difft log -p --ext-diff
+    dshow = -c diff.external=difft show --ext-diff
+    ddiff = -c diff.external=difft diff
+[branch]
+    sort = -committerdate
 [core]
-editor = vim
-excludesfile = ~/.gitignore
-[push]
-autoSetupRemote = true
-[pull]
-ff = only
-[init]
-defaultBranch = main
-[filter "lfs"]
-clean = git-lfs clean -- %f
-smudge = git-lfs smudge -- %f
-process = git-lfs filter-process
-required = true
+    editor = vim
+    excludesfile = ~/.gitignore
 [credential]
-helper = store
+    helper = store
+[diff]
+    algorithm = histogram
+[fetch]
+    prune = true
+[push]
+    autoSetupRemote = true
+[help]
+    autocorrect = prompt
+[user]
+	email = haukurpalljonsson@gmail.com
+	name = Haukur Páll
+[pull]
+    ff = only
+[init]
+    defaultBranch = main
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
 [safe]
 	directory = /home/haukurpj/projects/ebuild_local_repo/.git
 	directory = /home/haukurpj/projects/ebuild_local_repo
