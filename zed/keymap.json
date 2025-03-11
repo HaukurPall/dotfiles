@@ -23,30 +23,44 @@
     "bindings": {
       "space s": "workspace::Save",
       "space o": "outline::Toggle",
-      "space f": "editor::ToggleCodeActions"
+      "space f": "editor::ToggleCodeActions",
+      "space t": "terminal_panel::ToggleFocus",
+      "space a": "assistant::InlineAssist",
+      "space tab": "tab_switcher::Toggle"
     }
   },
-  // {
-  //   "context": "VimControl && !menu && vim_mode != operator",
-  //   "bindings": {
-  //     "w": "vim::NextSubwordStart",
-  //     "b": "vim::PreviousSubwordStart",
-  //     "e": "vim::NextSubwordEnd",
-  //     "g e": "vim::PreviousSubwordEnd"
-  //   }
-  // },
   {
+    "context": "VimControl && !menu && vim_mode != operator",
+    "bindings": {
+      "w": "vim::NextSubwordStart",
+      "b": "vim::PreviousSubwordStart",
+      "e": "vim::NextSubwordEnd",
+      "g e": "vim::PreviousSubwordEnd"
+    }
+  },
+  {
+    // "context": "Picker || menu || TabSwitcher",
     "bindings": {
       "ctrl-j": "menu::SelectNext",
-      "ctrl-k": "menu::SelectPrev"
+      "ctrl-k": "menu::SelectPrev",
+      "ctrl-q": "tab_switcher::CloseSelectedItem"
     }
   },
   {
-    "context": "vim_mode == insert && (showing_code_actions || showing_completions || inline_completion)",
+    "context": "vim_mode == normal",
+    "bindings": {
+      "ctrl-j": "vim::NextMethodStart",
+      "ctrl-k": "vim::PreviousMethodStart",
+      "shift-j": "vim::ScrollDown",
+      "shift-k": "vim::ScrollUp"
+    }
+  },
+  {
+    "context": "vim_mode == insert && (showing_code_actions || showing_completions || edit_prediction)",
     "bindings": {
       "ctrl-j": "editor::ContextMenuNext",
       "ctrl-k": "editor::ContextMenuPrev",
-      "ctrl-l": "editor::AcceptPartialInlineCompletion"
+      "ctrl-l": "editor::AcceptPartialEditPrediction"
     }
   },
   {
@@ -54,10 +68,11 @@
     "bindings": {
       "ctrl-j": ["terminal::SendKeystroke", "ctrl-j"],
       "ctrl-k": ["terminal::SendKeystroke", "ctrl-k"],
-      "ctrl-w h": ["workspace::ActivatePaneInDirection", "Left"],
-      "ctrl-w l": ["workspace::ActivatePaneInDirection", "Right"],
-      "ctrl-w k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-w j": ["workspace::ActivatePaneInDirection", "Down"]
+      "ctrl-b": ["terminal::SendKeystroke", "ctrl-b"],
+      "ctrl-w h": "workspace::ActivatePaneLeft",
+      "ctrl-w l": "workspace::ActivatePaneRight",
+      "ctrl-w k": "workspace::ActivatePaneUp",
+      "ctrl-w j": "workspace::ActivatePaneDown"
     }
   }
 ]

@@ -8,12 +8,22 @@
 // from the command palette
 {
   // Startup
-  "assistant": {
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4o"
-    },
-    "version": "2"
+  "ssh_connections": [
+    {
+      "host": "157.157.221.29",
+      "username": "root",
+      "port": 36128,
+      "projects": [
+        {
+          "paths": [
+            "/workspace"
+          ]
+        }
+      ]
+    }
+  ],
+  "features": {
+    "edit_prediction_provider": "zed"
   },
   "auto_update": false,
   "restore_on_startup": "last_workspace",
@@ -24,9 +34,16 @@
   },
   // UI
   "ui_font_size": 16,
-  "buffer_font_size": 16,
+  "font-family": "CommitMono",
+  "buffer_font_size": 16.0,
   "buffer_font_features": {
-    "calt": false
+    "liga": false,
+    "ligatures": false,
+    "dlig": false,
+    "calt": false,
+    "ss07": false,
+    "ss08": false,
+    "ss09": false // >=<=
   },
   "theme": {
     "mode": "system",
@@ -40,8 +57,8 @@
     "close_position": "right",
     "file_icons": true,
     "git_status": true,
-    "activate_on_close": "neighbour",
-    "always_show_close_button": false
+    "activate_on_close": "history",
+    "show_close_button": "hover"
   },
   "project_panel": {
     "scrollbar": {
@@ -50,6 +67,15 @@
   },
   "scrollbar": {
     "show": "always"
+  },
+  // Assistant
+  "assistant": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-7-sonnet-latest"
+    },
+    "version": "2",
+    "enable_experimental_live_diffs": true
   },
   // Git
   "git": {
@@ -101,9 +127,6 @@
   "lsp": {
     "pyright": {
       "settings": {
-        "python": {
-          "pythonPath": ".venv/bin/python"
-        },
         "python.analysis": {
           "diagnosticMode": "openFilesOnly",
           "typeCheckingMode": "strict",
